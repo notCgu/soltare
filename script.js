@@ -11,6 +11,8 @@ const POSSIBLE_TITLES = ["solitaire", "soltiare", "salitear", "creative game tit
 
 document.title = POSSIBLE_TITLES[Math.floor(Math.random()*POSSIBLE_TITLES.length)];
 
+setUpGame();
+
 function setUpGame(){
   var remainingCards = CARDS;
   playingField = [];
