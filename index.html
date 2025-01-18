@@ -7,26 +7,13 @@
 </head>
 
 <body>
-  <img id='image_1' style='left:50px;top:20px;width:150px;height:210px;' class='home_page'>
-  <img id='image_2' style='right:50px;top:20px;width:150px;height:210px;' class='home_page'>
-  <img id='image_3' style='left:50px;bottom:20px;width:150px;height:210px;' class='home_page'>
-  <img id='image_4' style='right:50px;bottom:20px;width:150px;height:210px;' class='home_page'>
-  <div style="height:100vh;display:grid;place-items:center;" class='home_page'>
+  <img id='image_1' style='left:50px;top:20px;width:150px;height:210px;'>
+  <img id='image_2' style='right:50px;top:20px;width:150px;height:210px;'>
+  <img id='image_3' style='left:50px;bottom:20px;width:150px;height:210px;'>
+  <img id='image_4' style='right:50px;bottom:20px;width:150px;height:210px;'>
+  <div style="height:100vh;display:grid;place-items:center;">
     <p>welkum two solitaire!!!!</p>
-    <div class="home_page" onmousedown="mousedown();" style="width:100px;height:100px;"></div>
+    <a href="game_page.html">Play</a>
   </div>
-  <script>
-    document.getElementById("image_1").src = "images/"+["spades","diamonds","hearts","clubs"][Math.floor(Math.random()*4)]+"/"+["A",2,3,4,5,6,7,8,9,0,"J","Q","K"][Math.floor(Math.random()*13)]+".png";
-    document.getElementById("image_2").src = "images/"+["spades","diamonds","hearts","clubs"][Math.floor(Math.random()*4)]+"/"+["A",2,3,4,5,6,7,8,9,0,"J","Q","K"][Math.floor(Math.random()*13)]+".png";
-    document.getElementById("image_3").src = "images/"+["spades","diamonds","hearts","clubs"][Math.floor(Math.random()*4)]+"/"+["A",2,3,4,5,6,7,8,9,0,"J","Q","K"][Math.floor(Math.random()*13)]+".png";
-    document.getElementById("image_4").src = "images/"+["spades","diamonds","hearts","clubs"][Math.floor(Math.random()*4)]+"/"+["A",2,3,4,5,6,7,8,9,0,"J","Q","K"][Math.floor(Math.random()*13)]+".png";
-    function mousedown(){
-      console.log("hi");
-      var elements = document.getElementsByClassName("home_page");
-      console.log(elements);
-      for(let i = 0; i < elements.length; i ++){
-        elements[i].style.visibility = "hidden";
-      }
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
