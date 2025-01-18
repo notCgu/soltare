@@ -7,6 +7,9 @@ var stock = [];
 var trash = [];
 var foundations = [0,0,0,0];
 var hiddenCards = [0,1,2,3,4,5,6];
+const POSSIBLE_TITLES = ["solitaire", "soltiare", "salitear", "creative game title", "placeholder", "page not found!", "card game", "poker", "the game of stacking cards", "crazy? i was crazy once. they locked me in a room. a rubber toom. a rubber room with rats. and rats make me crazy."];
+
+document.title = POSSIBLE_TITLES[Math.floor(Math.random()*POSSIBLE_TITLES.length)];
 
 function setUpGame(){
   var remainingCards = CARDS;
