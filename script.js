@@ -8,8 +8,7 @@ var trash = [];
 var foundations = [0,0,0,0];
 var hiddenCards = [0,1,2,3,4,5,6];
 const POSSIBLE_TITLES = ["solitaire", "soltiare", "salitear", "creative game title", "placeholder", "page not found!", "card game", "poker", "the game of stacking cards", "crazy? i was crazy once. they locked me in a room. a rubber toom. a rubber room with rats. and rats make me crazy."];
-
-document.title = POSSIBLE_TITLES[Math.floor(Math.random()*POSSIBLE_TITLES.length)];
+const CARD_WIDTH = (window.innerWidth-200)/10;
 
 setUpGame();
 
@@ -20,6 +19,7 @@ function setUpGame(){
   foundations = [0,0,0,0];
   hiddenCards = [0,1,2,3,4,5,6];
   trash = [];
+  document.title = POSSIBLE_TITLES[Math.floor(Math.random()*POSSIBLE_TITLES.length)];
   for(let i = 0; i < 7; i ++){
     playingField.push([]);
     for(let j = 0; j <= i; j ++){
@@ -27,10 +27,10 @@ function setUpGame(){
     }
   }
   stock = remainingCards;
-  updateScreen();
+  updateConsole();
 }
 
-function updateScreen(){
+function updateConsole(){
   var maxLength = 0;
   var outputStrings = [];
   for(let i = 0; i < 7; i ++){
@@ -53,5 +53,11 @@ function updateScreen(){
   }
   for(let i = 0; i < outputStrings.length; i ++){
     console.log(outputStrings[i]);
+  }
+}
+
+function updateScreen(){
+  for(let i = 0; i < 7; i ++){
+    
   }
 }
